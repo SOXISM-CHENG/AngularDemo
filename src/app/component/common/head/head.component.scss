@@ -1,0 +1,34 @@
+.head-box {
+    background: #f2f2f2;
+    height: 33px;
+    line-height: 33px;
+    .head-body {
+        width: 1230px;
+        margin: auto;
+        .head-left {
+            display: inline-block;
+            color: #999;
+            span {
+                margin-right: 10px;
+            }
+        }
+        .head-right {
+            float: right;
+            .head-right-ul {
+                height: 33px;
+                line-height: 33px;
+                background: none;
+            }
+        }
+    }
+}
+
+:host ::ng-deep {
+    .ant-menu-item,
+    .ant-menu-submenu-title {
+        padding: 0 10px!important;
+    }
+    .ant-menu-sub {
+        width: 110px!important;
+    }
+}
