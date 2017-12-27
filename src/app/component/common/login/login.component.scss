@@ -1,0 +1,154 @@
+// @import '../../../../styles/learner/_common.scss';
+$radius: 5px;
+$comcolor: #0569b5; //主题颜色i*I rgb(214, 0, 15)
+$defaultColor: #666;
+$bodyWidth: 1200px; //页面内容部分最大宽度
+$bgColor: #f7f5f5; //页面背景色
+$size16: 16px;
+$size14: 14px;
+.login-wrapper {
+    background: #f7f5f5;
+    padding: 20px 0;
+    min-width: 1200px;
+    .login-logo {
+        width: 1200px;
+        margin: 0 auto 20px;
+    }
+    .login-body {
+        width: 1200px;
+        height: 390px;
+        background: #fff;
+        margin: 0 auto;
+        overflow: hidden;
+        .login-left {
+            float: left;
+            width: 740px;
+            height: 100%;
+            background-size: 100% 100%;
+        }
+        .login-right {
+            float: left;
+            width: 460px;
+            position: relative;
+            .login-tit {
+                text-align: center;
+                margin: 0 10px;
+                padding: 24px 0;
+                font-size: 20px;
+                color: #666666;
+                border-bottom: 1px solid #eeeeee;
+            }
+            .form-con {
+                padding: 30px 30px 0;
+                .login-form {
+                    max-width: 400px;
+                    .ant-form-item {
+                        margin-bottom: 30px;
+                    }
+                    .ant-btn-primary {
+                        height: 48px;
+                        font-size: 18px;
+                    }
+                    .ant-checkbox-checked .ant-checkbox-inner,
+                    .ant-checkbox-indeterminate .ant-checkbox-inner {
+                        background-color: $comcolor;
+                        border-color: $comcolor;
+                    }
+                    .defaultLink {
+                        color: $defaultColor;
+                        &:hover {
+                            color: $comcolor;
+                        }
+                    }
+                }
+                .login-form-forgot {
+                    float: right;
+                }
+                .login-form-button {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    /*用户类型弹出层*/
+    .type-model {
+        ul {
+            overflow: hidden;
+            text-align: center;
+            margin-top: 20px;
+            li {
+                line-height: 30px;
+                cursor: pointer;
+                text-align: center;
+                font-size: 16px;
+                display: inline-block;
+                margin: 0 10px;
+                width: 80px;
+                height: 80px;
+                border: 1px solid #666;
+                border-radius: 5px;
+                color: #666;
+                i {
+                    display: block;
+                    font-size: 36px;
+                    margin: 10px 0 5px 0;
+                    color: #666;
+                }
+                &.active {
+                    border: 1px solid $comcolor;
+                    color: $comcolor;
+                    i {
+                        color: $comcolor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+:host ::ng-deep {
+    .login-form {
+        .ant-form-item {
+            .ant-form-explain {
+                font-size: 14px;
+                margin-top: 5px;
+            }
+        }
+        .ant-input {
+            height: 48px;
+            border-radius: 0;
+            background: #f9f9f9;
+            font-size: 14px;
+            padding-left: 40px !important;
+            &:focus {
+                box-shadow: 0 0 0 !important;
+            }
+        }
+        .anticon-user,
+        .anticon-lock {
+            font-size: 24px;
+        }
+    }
+    footer {
+        background: #f7f5f5 !important;
+        color: #474443 !important;
+    }
+    .ant-modal-header {
+        border-bottom: none;
+        text-align: center;
+        .ant-modal-title {
+            padding-top: 20px;
+        }
+    }
+    .ant-modal-footer {
+        border-top: none;
+        text-align: center;
+        .ant-btn-ghost {
+            display: none;
+        }
+        .ant-btn-primary {
+            margin-bottom: 20px;
+        }
+    }
+}

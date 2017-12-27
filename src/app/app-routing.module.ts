@@ -4,7 +4,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
-import { PageNotFoundComponent, HomeBodyComponent } from '../app/component/common';
+import { PageNotFoundComponent, HomeBodyComponent, LoginComponent } from '../app/component/common';
+// import { LoginComponent } from '../app/component/common/login/login.component';
 /**
  * 引入的路由指向文件
  */
@@ -19,7 +20,7 @@ const appRoutes: Routes = [
       { path: 'home', loadChildren: './component/home/home.module#HomeModule' },
     ]
   },
-  // { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: '404', component: PageNotFoundComponent },
   { path: '**', redirectTo: '404' },
 ];
@@ -30,7 +31,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
   ],
   exports: [
-    RouterModule
+    RouterModule,
   ],
   declarations: [
   ]

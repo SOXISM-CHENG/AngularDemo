@@ -7,6 +7,9 @@ import { HomeBodyComponent } from './home-body/home-body.component';
 import { RouterModule } from '@angular/router';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ImgComponent } from '../../../app/component/common/img/img.component';
+import { LoginComponent } from '../../../app/component/common/login/login.component';
 
 export const allComponents = [
   HeadComponent,
@@ -20,13 +23,17 @@ export const allComponents = [
     CommonModule,
     RouterModule,
     FormsModule,
+    ReactiveFormsModule,
     NgZorroAntdModule.forRoot(),
   ],
   exports: [
     ...allComponents
   ],
   declarations: [
-    ...allComponents
+    ...allComponents,
+    ImgComponent,
+    LoginComponent
+
   ]
 })
 export class CommonAllModule { }
